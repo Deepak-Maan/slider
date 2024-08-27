@@ -1,0 +1,253 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Slider</title>
+    <style>
+        /* slick-slider */
+        .slick_slider_one {
+            width: 100%;
+            background-color: transparent;
+        }
+
+        .slick-track {
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+        }
+
+        .slick-center {
+            padding-left: 22px !important;
+            padding-right: 22px !important;
+        }
+
+        .slick_slider_one .slick-slide.slick-current,
+        .slick_slider_one .slick-slide.slick-center {
+            transform: scale(1);
+            width: 400px !important;
+            height: 600px;
+            align-items: center;
+        }
+
+        .slick_slider_one .slick-slide.slick-center .blur-layer {
+            border: 4px solid yellowgreen !important;
+        }
+
+        .slick_slider_one .slick-slide {
+            transform: scale(0.6);
+        }
+
+        .slick-slide {
+            padding-left: 12px !important;
+            padding-right: 12px !important;
+        }
+
+        .slick_slider_one .slick-center {
+            transform: scale(1.9);
+        }
+
+        .slick_slider_one .slick-center+div {
+            transform: scale(0.8) !important;
+            width: unset !important;
+        }
+
+        .slick_slider_one div:has(+.slick-center) {
+            transform: scale(0.7) !important;
+            width: unset !important;
+        }
+
+        /* Custom styles for the slider dots */
+        .slick-dots li button:before {
+            color: yellowgreen !important;
+        }
+
+        .slick-dots li.slick-active button:before {
+            opacity: 1 !important;
+            color: yellowgreen !important;
+        }
+
+        /* Media query for alignment on large screens */
+        @media (min-width: 991.5px) {
+            .slick-track {
+                display: flex !important;
+                align-items: center !important;
+                justify-content: center !important;
+            }
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                    },
+                    fontFamily: {
+                        roboto: ["Roboto", "sans-serif"]
+                    },
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <section class="bg-black">
+        <h1 class="text-5xl font-bold py-5 font-roboto text-center text-white">ELEVATE YOUR BRANS TO NEW <span
+                class="block">
+                HEIGHTS THROUGH THE POWER
+                OF
+            </span></h1>
+        <p class="text-4xl text-white text-center font-medium">DIGITAL ADVANTURE</p>
+        <div class="flex items-center justify-center">
+            <button class="border-[3px] border-white flex gap-3 items-center text-white text-2xl mt-5 py-2 px-3 ">
+                BOOK FREE CONSULTANT <span><svg width="12" height="10" viewBox="0 0 12 10" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M6.29289 0.292893C6.68342 -0.0976311 7.31658 -0.0976311 7.70711 0.292893L11.7071 4.29289C12.0976 4.68342 12.0976 5.31658 11.7071 5.70711L7.70711 9.70711C7.31658 10.0976 6.68342 10.0976 6.29289 9.70711C5.90237 9.31658 5.90237 8.68342 6.29289 8.29289L8.58579 6H1C0.447715 6 0 5.55228 0 5C0 4.44772 0.447715 4 1 4H8.58579L6.29289 1.70711C5.90237 1.31658 5.90237 0.683417 6.29289 0.292893Z"
+                            fill="white" />
+                    </svg>
+                </span>
+            </button>
+        </div>
+        <div class="container relative mx-auto max-w-[1164px] overflow-hidden px-4">
+            <div class="slider-for slick_slider_one slider pb-2 ">
+                <div class="flex items-center justify-center relative ">
+                    <div class="relative mx-auto size-[300px]">
+                        <img class="size-[300px] absolute z-0 object-cover" src="./assets/images/forest-image.jpg"
+                            alt="img">
+                        <div
+                            class="bg-black bg-opacity-[50%] blur-layer backdrop:blur-[30px] border-[4px] border-white size-[80%] flex items-center justify-center absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10">
+                            <p class="text-white text-3xl font-roboto font-medium">DEMO</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex justify-center relative items-center ">
+                    <div class="relative mx-auto size-[300px]">
+                        <img class="size-[300px] absolute z-0 object-cover" src="./assets/images/tree-on-mountain.jpg"
+                            alt="img">
+                        <div
+                            class="bg-black bg-opacity-[50%] blur-layer backdrop:blur-[30px] border-[4px] border-white size-[80%] flex items-center justify-center absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10">
+                            <p class="text-white text-3xl font-roboto font-medium">DEMO</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex justify-center relative items-center ">
+                    <div class="relative mx-auto size-[300px]">
+                        <img class="size-[300px] absolute z-0 object-cover" src="./assets/images/nature-leaf-image.jpg"
+                            alt="img">
+                        <div
+                            class="bg-black bg-opacity-[50%] blur-layer backdrop:blur-[30px] border-[4px] border-white size-[80%] flex items-center justify-center absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10">
+                            <p class="text-white text-3xl font-roboto font-medium">DEMO</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex justify-center relative items-center ">
+                    <div class="relative mx-auto size-[300px]">
+                        <img class="size-[300px] absolute z-0 object-cover" src="./assets/images/forest-image.jpg"
+                            alt="img">
+                        <div
+                            class="bg-black bg-opacity-[50%] blur-layer backdrop:blur-[30px] border-[4px] border-white size-[80%] flex items-center justify-center absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10">
+                            <p class="text-white text-3xl font-roboto font-medium">DEMO</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex justify-center relative items-center ">
+                    <div class="relative mx-auto size-[300px]">
+                        <img class="size-[300px] absolute z-0 object-cover" src="./assets/images/tree-on-mountain.jpg"
+                            alt="img">
+                        <div
+                            class="bg-black bg-opacity-[50%] blur-layer backdrop:blur-[30px] border-[4px] border-white size-[80%] flex items-center justify-center absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10">
+                            <p class="text-white text-3xl font-roboto font-medium">DEMO</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex justify-center relative items-center ">
+                    <div class="relative mx-auto size-[300px]">
+                        <img class="size-[300px] absolute z-0 object-cover" src="./assets/images/nature-leaf-image.jpg"
+                            alt="img">
+                        <div
+                            class="bg-black bg-opacity-[50%] blur-layer backdrop:blur-[30px] border-[4px] border-white size-[80%] flex items-center justify-center absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10">
+                            <p class="text-white text-3xl font-roboto font-medium">DEMO</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <span class="cursor-pointer prev absolute bottom-[30%] left-[30%]">
+                <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M13.5349 15.0001L19.7224 21.1876L17.9549 22.9551L9.99991 15.0001L17.9549 7.04508L19.7224 8.81258L13.5349 15.0001Z"
+                        fill="white" />
+                </svg>
+            </span>
+            <span class="cursor-pointer next absolute bottom-[30%] right-[30%]">
+                <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_2_6421)">
+                        <path
+                            d="M16.4648 14.9999L10.2773 8.81242L12.0448 7.04492L19.9998 14.9999L12.0448 22.9549L10.2773 21.1874L16.4648 14.9999Z"
+                            fill="white" />
+                    </g>
+                    <defs>
+                        <clipPath id="clip0_2_6421">
+                            <rect width="30" height="30" fill="white" />
+                        </clipPath>
+                    </defs>
+                </svg>
+            </span>
+        </div>
+    </section>
+
+    <!-- JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+        integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"
+        integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        $('.slider-for').slick({
+            arrows: true,
+            dots: true,
+            prevArrow: $('.prev'),
+            nextArrow: $('.next'),
+            centerMode: true,
+            slidesToShow: 5,
+            slidesToScroll: 1,
+            infinite: true,
+            responsive: [
+                {
+                    breakpoint: 991.5,
+                    settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 1,
+                        infinite: true,
+                    }
+                },
+                {
+                    breakpoint: 767.5,
+                    settings: {
+                        centerMode: true,
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
+                },
+                {
+                    breakpoint: 575.5,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
+                }
+            ]
+        });
+    </script>
+</body>
+
+</html>
